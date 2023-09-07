@@ -6,17 +6,20 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  const MyApp({super.key});
+  const MyApp({super.key}) {
+    // TODO: implement MyApp
+    throw UnimplementedError();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'My App',
       home: HomePage(),
     );
